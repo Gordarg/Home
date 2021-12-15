@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * 
+ * App configuration
+ * 
+ */
+
+ // Application name
+define('_AppName', 'UVS eCommerce');
+
+// Default URL (For redirects and etc.)
+define('_Root', 'http://FRONT_SERVER_NAME:80/');
+define('_Icon', _Root . 'img/logo.svg');
+define('_Api', 'http://API_SERVER_NAME:8000/');
+
+// Run application in debug mode
+define('_Debug', true);
