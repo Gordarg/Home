@@ -9,7 +9,7 @@
     <title><?php echo $Data['Title']?></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="<?php echo _Root ?>assets/css/main.css" />
+    <link rel="stylesheet" href="<?php echo _Root ?>app/assets/css/main.css" />
 </head>
 <body class="homepage is-preload">
 <div id="page-wrapper">
@@ -29,14 +29,14 @@
                             <nav id="nav">
                                 <ul>
                                     <li>
-                                        <a href="#">Subsidiaries</a>
+                                        <a href="">Subsidiaries</a>
                                         <ul>
                                             <li><a href="https://foruq.ir/">Foruq</a></li>
                                             <li><a href="https://agriinno.com/">AgriInno</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">CSR</a>
+                                        <a href="">CSR</a>
                                         <ul>
                                             <li>
                                                 <a href="https://sariab.ir">Sariab</a>
@@ -96,7 +96,7 @@
                         <section>
                             <h2>About</h2>
                             <ul class="divided">
-                                <li><a href="#">Team</a></li>
+                                <li><a href="<?php echo _Root ?>Home/Team">Team</a></li>
                                 <li><a href="http://kouy.ir/tayyebi">Director</a></li>
                             </ul>
                         </section>
@@ -174,12 +174,12 @@
 </div>
 
 <!-- Scripts -->
-<script src="<?php echo _Root ?>assets/js/jquery.min.js"></script>
-<script src="<?php echo _Root ?>assets/js/jquery.dropotron.min.js"></script>
-<script src="<?php echo _Root ?>assets/js/browser.min.js"></script>
-<script src="<?php echo _Root ?>assets/js/breakpoints.min.js"></script>
-<script src="<?php echo _Root ?>assets/js/util.js"></script>
-<script src="<?php echo _Root ?>assets/js/main.js"></script>
+<script src="<?php echo _Root ?>app/assets/js/jquery.min.js"></script>
+<script src="<?php echo _Root ?>app/assets/js/jquery.dropotron.min.js"></script>
+<script src="<?php echo _Root ?>app/assets/js/browser.min.js"></script>
+<script src="<?php echo _Root ?>app/assets/js/breakpoints.min.js"></script>
+<script src="<?php echo _Root ?>app/assets/js/util.js"></script>
+<script src="<?php echo _Root ?>app/assets/js/main.js"></script>
 
 </body>
 </html>

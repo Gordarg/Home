@@ -96,47 +96,28 @@
                     <section class="box article-list">
                         <h2 class="icon fa-file-alt">Recent Posts</h2>
 
+
+                        <?php
+                        foreach ($Data['News'] as $item)
+                        {
+                        ?>
                         <!-- Excerpt -->
                         <article class="box excerpt">
                             <a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
                             <div>
                                 <header>
-                                    <span class="date">July 24</span>
-                                    <h3><a href="#">Repairing a hyperspace window</a></h3>
+                                    <span class="date"><?php echo $item['pubDate'] ?></span>
+                                    <h3><a href="<?php echo $item['link'] ?>"><?php echo $item['title'] ?></a></h3>
                                 </header>
-                                <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis, feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi
-                                    dolore.</p>
+                                <p><?php echo $item['description'] ?></p>
                             </div>
                         </article>
-
-                        <!-- Excerpt -->
-                        <article class="box excerpt">
-                            <a href="#" class="image left"><img src="images/pic05.jpg" alt="" /></a>
-                            <div>
-                                <header>
-                                    <span class="date">July 18</span>
-                                    <h3><a href="#">Adventuring with a knee injury</a></h3>
-                                </header>
-                                <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis, feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi
-                                    dolore.</p>
-                            </div>
-                        </article>
-
-                        <!-- Excerpt -->
-                        <article class="box excerpt">
-                            <a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
-                            <div>
-                                <header>
-                                    <span class="date">July 14</span>
-                                    <h3><a href="#">Preparing for Y2K38</a></h3>
-                                </header>
-                                <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis, feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi
-                                    dolore.</p>
-                            </div>
-                        </article>
+                        <?php
+                        }
+                        ?>
 
                         <footer>
-                            <a href="<?php echo _Root ?>rss/news.xml" class="button alt icon solid fa-rss">News Feed</a>
+                            <a href="<?php echo _Root ?>app/rss/news.xml" class="button alt icon solid fa-rss">News Feed</a>
                         </footer>
                     </section>
                 </div>
@@ -145,21 +126,27 @@
                     <!-- Spotlight -->
                     <section class="box spotlight">
                         <h2 class="icon fa-file-alt">Spotlight</h2>
+
+                        <?php
+                        foreach ($Data['Articles'] as $item)
+                        {
+                        ?>
                         <article>
                             <a href="#" class="image featured"><img src="images/pic07.jpg" alt=""></a>
                             <header>
-                                <h3><a href="#">Neural Implants</a></h3>
-                                <p>The pros and cons. Mostly cons.</p>
+                                <h3><a href="<?php echo $item['link'] ?>"><?php echo $item['title'] ?></a></h3>
+                                <p><?php echo $item['pubDate'] ?></p>
                             </header>
-                            <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod quisturpis nisi consequat ornare in, hendrerit in lectus semper mod quis eget mi quat etiam lorem. Phasellus quam turpis, feugiat sed et lorem
-                                ipsum dolor consequat dolor feugiat sed et tempus consequat etiam.</p>
-                            <p>Lorem ipsum dolor quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod quisturpis nisi consequat etiam lorem sed amet quam turpis.</p>
+                            <p><?php echo $item['description'] ?></p>
                             <footer>
-                                <a href="<?php echo _Root ?>rss/articles.xml" class="button alt icon solid fa-rss">Articles Feed</a>
+                                <a href="<?php echo _Root ?>app/rss/articles.xml" class="button alt icon solid fa-rss">Articles Feed</a>
                             </footer>
                         </article>
-                    </section>
+                        <?php
+                        }
+                        ?>
 
+                    </section>
                 </div>
             </div>
         </div>

@@ -16,8 +16,9 @@ else
 // Exception handler
 include('app/core/Exceptions.php');
 
-// Exception handler
+// Libs
 include('app/lib/HttpMethods.php');
+include('app/lib/Xml.php');
 
 // Controllers core
 include('app/core/Controller.php');

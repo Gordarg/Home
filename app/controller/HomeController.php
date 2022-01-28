@@ -4,8 +4,13 @@ class HomeController extends Controller {
 
     function IndexGET() {
 
+        $news = array_slice(Xml::Read(_Root . 'app/rss/news.xml'),0,3);
+        $articles = array_slice(Xml::Read(_Root . 'app/rss/articles.xml'),0,1);
+
         $this->Render('Index', [
-            'Title' => _AppName
+            'Title' => _AppName,
+            'News' => $news,
+            'Articles' => $articles
         ]);
         exit;
     }
