@@ -7,12 +7,10 @@
  */
 
  // Application name
-define('_AppName', 'UVS eCommerce');
+define('_AppName', 'Gordarg');
 
 // Default URL (For redirects and etc.)
-define('_Root', 'http://130.185.122.247/');
-define('_Icon', _Root . 'img/logo.svg');
-define('_Api', 'http://130.185.122.247:8000/');
+define('_Root', 'http://localhost/gordarg.com/');
 
 // Run application in debug mode
 define('_Debug', true);
