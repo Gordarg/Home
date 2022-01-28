@@ -145,27 +145,27 @@ class Controller {
         // Set $view variable
         $this->SetView($View);
         // The current view file
-        $CurrentViewFile = 'view/' . $this->ViewDirectory . '/' . $View . '.php';
+        $CurrentViewFile = 'app/view/' . $this->ViewDirectory . '/' . $View . '.php';
         // Run the payload for current file
         $this->Evaluate($this->GetPayload($CurrentViewFile, false), $Data);
         // Get master layout head
         if (!$IsPartial)
-            $this->Evaluate($this->RenderBody('view/_Layout.php', true), $Data);
+            $this->Evaluate($this->RenderBody('app/view/_Layout.php', true), $Data);
         // Get slave layout head
         if (!$IsPartial)
-            if (file_exists('view/' . $this->ViewDirectory . '/_Layout.php'))
-                $this->Evaluate($this->RenderBody('view/' . $this->ViewDirectory . '/_Layout.php', true),
+            if (file_exists('app/view/' . $this->ViewDirectory . '/_Layout.php'))
+                $this->Evaluate($this->RenderBody('app/view/' . $this->ViewDirectory . '/_Layout.php', true),
                 $Data);
         // Render the view body
         $this->Evaluate($this->GetPayload($CurrentViewFile, true), $Data);
         // Get slave layout tail
         if (!$IsPartial)
-            if (file_exists('view/' . $this->ViewDirectory . '/_Layout.php'))
-                $this->Evaluate($this->RenderBody('view/' . $this->ViewDirectory . '/_Layout.php', false),
+            if (file_exists('app/view/' . $this->ViewDirectory . '/_Layout.php'))
+                $this->Evaluate($this->RenderBody('app/view/' . $this->ViewDirectory . '/_Layout.php', false),
                 $Data);
         // Get master layout tail
         if (!$IsPartial)
-            $this->Evaluate($this->RenderBody('view/_Layout.php', false), $Data);
+            $this->Evaluate($this->RenderBody('app/view/_Layout.php', false), $Data);
 
     }
 

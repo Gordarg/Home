@@ -100,7 +100,7 @@ class App {
         // Get other parameters
         $this->Params = array_values($URL);
         // Call the method form class
-        $ControllerFilePath = 'controller/' . $this->Controller.'.php';
+        $ControllerFilePath = 'app/controller/' . $this->Controller.'.php';
         // If controller file does not exist
         if (!file_exists($ControllerFilePath))
 	        $this->ThowError(404);

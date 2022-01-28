@@ -1,7 +1,7 @@
 <?php
 
 // Read configuration
-include('core/Config.php');
+include('app/core/Config.php');
 
 if (_Debug)
 {
@@ -14,15 +14,15 @@ else
     error_reporting(0);
 
 // Exception handler
-include('core/Exceptions.php');
+include('app/core/Exceptions.php');
 
 // Exception handler
-include('lib/HttpMethods.php');
+include('app/lib/HttpMethods.php');
 
 // Controllers core
-include('core/Controller.php');
+include('app/core/Controller.php');
 
 // Router
-include('core/App.php');
+include('app/core/App.php');
 
 new App;

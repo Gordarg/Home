@@ -12,9 +12,16 @@ class HomeController extends Controller {
 
     function PolicyGET($name) {
         $this->Render('Policies'.$name, [
-            'Title' => _AppName
+            'Title' => $name . ' Policies'
         ]);
         exit;
+    }
+
+    function TeamGET(){
+        $this->Render('Team', [
+            'Title' => 'Our team'
+        ]);
+        exit; 
     }
 
 }
